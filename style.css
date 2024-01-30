@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url(./imagens/bg-mobile-light.jpg) no-repeat top center/cover;
+}
+
+body * {
+    font-family: 'Inter', sans-serif;
+    color: black;
+}
+
+/* Textos Titulo/subtitulo */
+
+h1, h3, h4, p {
+    text-align: center;
+}
+
+/* Caixa vertical */
+#container {
+    width: 100%;
+    max-width: 400px; /* ou qualquer valor desejado */
+    margin: 0px auto 0px;
+    padding: 0 24px;
+}
+
+/* Alinhamento da imagem avatar */
+#profile {
+    text-align: center;
+}
+
+/* Tamanho da imagem avatar */
+#profile img {
+    width: 142px;
+}
+
+/* links */
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 12px 0;
+}
+
+ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 24px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+#curriculo a {
+    background-image: url('./imagens/curriculo-lattes.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* animação dos links */
+
+ul li a:hover {
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid white;
+}
+
+#falecomigo h4 {
+    text-align: center;
+    color: rgba(247, 77, 219, 0.986);
+    animation: exemplo 0.8s infinite alternate; /* Animação */
+}
+ /* Animação */
+ @keyframes exemplo {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+
+}    
+/* social links */
+
+#social-links{
+    display: flex;
+    justify-content: center;
+    padding: -5px 0;
+    font-size: 24px;
+}
+
+#social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    transition: background 0.2s;
+    border-radius: 50%;
+}
+
+#social-links a:hover {
+    background:rgba(247, 77, 218, 0.582);
+}
+
+/* Footer */
+
+Footer {
+    padding: 24px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* media queries */
+@media (min-width: 700px) {
+    :root {
+      --bg-url: url(./assets/bg-desktop.jpg);
+    }
+  
+    .light {
+      --bg-url: url(./assets/bg-desktop-light.jpg);
+    }
+  }
+  
+  /* animation */
+  @keyframes slide-in {
+    from {
+      left: 0;
+    }
+    to {
+      left: 50%;
+    }
+  }
+  
+  @keyframes slide-back {
+    from {
+      left: 50%;
+    }
+    to {
+      left: 0;
+    }
+  }
